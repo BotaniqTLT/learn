@@ -10,7 +10,7 @@ $conn= new mysqli($servername,$username,$password);
      die("Connection failed:" .mysqli_connect_error());
 
  }
-//echo "connect succsesfully";
+//echo "connect succsesfully";fdfd
 $sql ="CREATE DATABASE testDB";
 if($conn->query($sql)===TRUE){
 echo "Database create succesfully";

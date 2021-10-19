@@ -47,6 +47,7 @@ cart.find(".buy").click(function(){
       dataType:"json",
       contentType: "application/json; charset=utf-8",
       success: function(res){
+        show_cart(res.cart);
         console.log(res);
       }
     })
@@ -62,6 +63,7 @@ cart.find(".remove").click(function(){
       dataType:"json",
       contentType: "application/json; charset=utf-8",
       success: function(res){
+        show_cart(res.cart);
         console.log(res);
       }
     })
@@ -76,6 +78,7 @@ cart.find(".clear").click(function(){
       dataType:"json",
       contentType: "application/json; charset=utf-8",
       success: function(res){
+        show_cart(res.cart);
         console.log(res);
       }
     })

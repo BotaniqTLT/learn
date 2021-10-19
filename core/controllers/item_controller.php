@@ -10,4 +10,10 @@ if($result === false || $result->num_rows === 0 )
     $item=$result->fetch_object();
     $_view="item";
 }
+
+
+
+
+
+
 //var_dump($result);

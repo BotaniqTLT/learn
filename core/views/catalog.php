@@ -1,6 +1,18 @@
 
 <div class="catalog">
-<?php 
+<form method="get">
+<button  name="sort_price_asc" value="1"> сортировать по возрастанию</button>
+<button  name="sort_price_desc" value="1"> сортировать по убыванию</button>
+</form>
+<?php //
+//var_dump($_GET['sort_price_asc']);
+if(isset($_GET['sort_price_asc'])== 1){
+  $catalog_items = $db_link->query('SELECT * FROM `product` ORDER BY `price` ASC');
+}
+if(isset($_GET['sort_price_desc'])==1){
+  $catalog_items = $db_link->query('SELECT * FROM `product` ORDER BY `price` DESC');
+}
+
 $i=0;
 while($item=$catalog_items->fetch_object() ) 
 {

@@ -35,6 +35,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       
          
 }   
+$id=$_SESSION['user_id'];
+$group="admin";
+$is_admin=in_group($id, $group);
+
 
 $_view="lk_store";
 

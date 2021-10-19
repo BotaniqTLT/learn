@@ -50,7 +50,24 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         
 
     }
-
+ //иницилизация переменных для виджета корзина
+    $response['cart']=array('summ'=>0,'total'=>0,'items'=>array()); 
+    $result = $db_link->query('SELECT* FROM `cart` INNER JOIN `product` ON `cart`.`product_id`=`product`.`id` WHERE `cart`.`cart_id`="' .$db_link->real_escape_string($cart_id).'"');
+    while ( $item= $result->fetch_object()){        
+       $summ= $item->count*$item->price;
+       $response['cart']['summ']=$response['cart']['summ']+$summ;
+        $response['cart']['total']++;
+        array_push($response['cart']['items'],array(
+            'id'=>$item->id,
+            'summ'=>$summ,
+            'count'=>$item->count,
+            'price'=>$item->price,
+            'name'=>$item->name,
+            'image'=>$item->image,
+        ));
+    }
+   //
+    
 } else  {
 
 }

@@ -33,10 +33,12 @@ E-mail <?=$user->email ?>  <br><br><br>
 function openForm() {
     document.getElementById("update_password").style.display = "block"; }
 </script>
+<?php 
+if($is_admin){?> 
 <a href="<?=urlgen("/add_item") ?>"> <div class="button1"> добавить товар </div> </a> <br></a>
 <a href="<?=urlgen("/edit_table_user") ?>"> <div class="button1"> редактиовать данные</div> </a> <br></a>
-   
-
+ <?php  
+}?>
 
 
 

@@ -19,13 +19,17 @@ background-color: blue;}
     background-color: red;
 }
 
-.ul_gel_lak{display: none;
-font-size:10px;
-padding: 0;
-list-style-type: none; }
+.ul_gel_lak{
+    display: block;
+    font-size:15px;
+    padding: 0;
+    list-style-type: none; 
+}
+
 
 .menu_left_name {
-list-style-type: none;}
+    list-style-type: none;
+}
 .logo {
 height: 30px;
 }
@@ -65,4 +69,12 @@ div.button1 {
 .catalog_item img{
     height: 100px;
     width: 100px;
+}
+
+
+.show_bd th {
+    text-align:left;
+}
+.hidden{
+display:none;
 }
